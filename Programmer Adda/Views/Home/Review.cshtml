@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "Review";
+    Layout = "~/Views/Shared/GenralMaster.cshtml";
+}
+<style>
+    body {
+    overflow-x:hidden
+    }
+</style>
+<script>
+    $(document).ready(function () {
+        $(".s").click(function () {
+            var d = $(this).attr("data");
+            $("#rtr").val(d);
+            for (var i = 1; i <= 5; i++)
+            {
+                if (i <= d) {
+                    $("#spr" + i).css("color", "blue");
+                }
+                else {
+                    $("#spr" + i).css("color", "black");
+                }
+            }
+        })
+    })
+</script>
+<form action="/Home/Review" method="post">
+<div class="row" style="background-image: url('../Content/img/images%20(20).jfif');background-repeat:no-repeat;background-size:100% 100%;margin-top:-12%">
+    <div class="row">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-6" style="min-height: 500px; margin-top: 50px; border: 4px solid blue; margin-bottom: 15px; background: #FFF8D0; border-radius: 30px; font-family: Gabriola; font-weight: bold; font-size:20px;">
+        <div class="row" style="background: blue; color: white; font-size: 40px; text-align: center; font-family: Gabriola; border-radius: 20px 20px 0px 0px;">Review-Form</div>
+        <br /><br />
+        Name<br />
+        <input type="text" name="name" class="form-control" placeholder="Enter name" required="required" style="font-size:18px;" /><br>
+        Email-Adress<br />
+        <input type="email" name="email" class="form-control" placeholder="Enter Mail Address" required="required" style="font-size:18px;" /><br>
+        <input type="hidden" name="rating" id="rtr"/>
+        Review<br />
+        <span class="fa fa-star s" style=" font-size:80px;cursor:pointer" id="spr1" data="1"></span>
+        <span class="fa fa-star s" style=" font-size:80px;cursor:pointer" id="spr2" data="2"></span>
+        <span class="fa fa-star s" style=" font-size:80px;cursor:pointer" id="spr3" data="3"></span>
+        <span class="fa fa-star s" style=" font-size:80px;cursor:pointer" id="spr4" data="4"></span>
+        <span class="fa fa-star s" style=" font-size:80px;cursor:pointer" id="spr5" data="5"></span>
+        <br /><br />
+        <input type="submit" value="Submit" class="btn btn-success" style="height: 50px; width: 200px; font-size:18px;"/>
+        <br /><br />
+    </div>
+    <div class="col-sm-3"></div>
+        </div>
+</div>
+    </form>
+
+
+

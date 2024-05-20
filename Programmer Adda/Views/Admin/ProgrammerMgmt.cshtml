@@ -1,0 +1,55 @@
+﻿@model List<Programmer_Adda.Models.Programmer>
+
+@{
+    ViewBag.Title = "ProgrammerMgmt";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+
+
+<div class="row" style="font-size:25px;">
+    <h2 style="color:orange;font-family:Gabriola;font-size:50px;text-align:center;font-weight:bold">ProgrammerMgmt</h2>
+
+    <table class="table table-responsive">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Mobile
+            </th>
+            <th>
+                ExpertArea
+            </th>
+            <th>
+                Qulification
+            </th>
+            <th>
+                Experience
+            </th>
+
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.mob)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ExpertArea)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.qua)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.exp)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+    </div>

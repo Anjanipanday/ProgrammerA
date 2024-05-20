@@ -1,0 +1,142 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Programmer_Adda</title>
+    <link href="~/Content/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/css/hover.css" rel="stylesheet" />
+    <script src="~/Content/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <style>
+        .d1 {
+        min-height:80px;
+        width:80px;
+        background:white;
+        margin-top:10px;
+        margin-left:10px;
+        float:left;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="container-fluid">
+            <div class=" row">
+                <div class="col-sm-2" style=" min-height:100px;">
+                    <div class="row">
+                        <img src="~/Content/img/adda.png" style="height:100px;width:100%;"/></div>
+                    </div>
+                <div class="col-sm-10" style="min-height:100px;background:blue;">
+                    <h1 style="font-size: 60px; color: white; text-align: center; font-weight: bold; text-shadow: 5px 5px 5px red; padding-top: 5px; font-family: Gabriola"> PROGRAMMER-ADDA</h1>
+                </div>
+            </div>
+            <div class="row">
+            <nav class="navbar navbar-default"style="min-height:60px;background:black;width:100%;">
+                <div class="container-fluid">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#" style="font-size: 25px; font-weight: bold; color: white; font-family: Gabriola">Programming Problem Salving Solution</a>
+                    </div>
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                        @*<ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                            <li><a href="#">Link</a></li>
+                            @*<li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Action</a></li>
+                                    <li><a href="#">Another action</a></li>
+                                    <li><a href="#">Something else here</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">Separated link</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li><a href="#">One more separated link</a></li>
+                                </ul>
+                            </li>
+                        </ul>*@
+                        @*<form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                            </div>
+                            <button type="submit" class="btn btn-default">Submit</button>
+                        </fo*@rm>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/Home/Index"style="font-size: 25px; font-weight: bold; color: white; font-family: Gabriola">Home</a></li>
+                            <li><a href="/Home/Aboutus" style="font-size: 25px; font-weight: bold; color: white; font-family: Gabriola">About us</a></li>
+                            <li><a href="/Home/Becamemember" style="font-size: 25px; font-weight: bold; color: white; font-family: Gabriola">Become Member</a></li>
+                            <li><a href="/Home/Disscussionform" style="font-size: 25px; font-weight: bold; color: white; font-family: Gabriola">Disscussion form</a></li>
+                            <li><a href="/Home/Enquiry" style="font-size: 25px; font-weight: bold; color: white; font-family: Gabriola">Enquiry</a></li>
+                            <li><a href="/Home/Review" style="font-size: 25px; font-weight: bold; color: white; font-family: Gabriola">Review</a></li>
+                            <li><a href="/Home/Login" style="font-size: 25px; font-weight: bold; color: white; font-family: Gabriola">Login</a></li>
+                            <li><a href="/Home/UploadQuiry" style="font-size: 25px; font-weight: bold; color: white; font-family: Gabriola">UploadQuiry</a></li>
+                       </ul>
+                    </div><!-- /.navbar-collapse -->
+                </div><!-- /.container-fluid -->
+            </nav>
+             </div>
+          
+       <div>
+            @RenderBody()
+        </div>
+            <!----------------------------------------------------start footer------------------------------------------------------------------------------>
+            <div class="row" style="background: blue; min-height: 300px; font-size: 23px; color: white; font-family: Gabriola;font-weight:bold">
+                <div class="col-sm-3">
+                    <h1>About Programming</h1>
+                    <hr>
+                    <p style="font-size:20px;color:white">Programming is the process of creating a set of instructions that tell a computer how to perform a task.Programming can be done using a variety of computer "languages," 
+                    such as SQL, Java, Python, and C++. Ada is widely used in critical systems, where any anomaly might lead to very serious consequences, e.g., accidental death, injury or severe financial loss. </p>
+                </div>
+                <div class="col-sm-3">
+                    <h1> Contact us</h1>
+                    <hr>
+                    <span class="fa fa-phone"></span>&nbsp;&nbsp;&nbsp;+918953422402<br>
+                    <span class="fa fa-envelope"></span>&nbsp;&nbsp;&nbsp;M-technology@gmail.com<br>
+                    <span class="fa fa-fax"></span>&nbsp;&nbsp;&nbsp;c-133 Secter-A  mahanagar near civil hospital<br>
+                    <h1 style="font-family:Gabriola;font-size:40px;color:white;font-weight:bold">Follow Us:</h1>
+                    <div class="row">
+                    <img src="~/Content/img/facebook.png"style="height:35px;width:40px;float:left;margin-left:5px" /> 
+                        <img src="~/Content/img/google.png" style="height: 30px; width: 40px; float: left; margin-left: 5px" />
+                        <img src="~/Content/img/twitter%20(4).png" style="height: 30px; width: 40px; float: left; margin-left: 5px" />
+                        <img src="~/Content/img/youtube.png" style="height: 35px; width: 40px; float: left; margin-left: 5px"/></div>
+                     </div>
+                <div class="col-sm-3">
+                  <h1>Our Team</h1><hr> 
+                    <br />
+                    <div class="d1 hvr hvr-push">
+                        <img src="~/Content/img/mahaguru.jpg" style="height:80px;width:100%" /> </div>
+                    <div class="d1 hvr hvr-pulse">
+                        <img src="~/Content/img/anjani.jpg" style="height:80px;width:100%"/></div>
+                    <div class="d1 hvr hvr-pop">
+                        <img src=" ~/Content/img/anku.JPG" style="height:80px;width:100% "/></div>
+                    <div class="d1 hvr hvr-buzz">
+                        <img src="~/Content/img/subia.jpg" style="height:80px;width:100%" /></div>
+                    <div class="d1 hvr hvr-buzz-out" >
+                        <img src="~/Content/img/Bhupesh.jpg" style="height:80px;width:100%" /></div>
+                    <div class="d1 hvr hvr-push" >
+                        <img src="~/Content/img/Amit.jpg" style="height:80px;width:100%" /></div>
+              </div>
+                <div class="col-sm-3">
+                    <h1>Our Location</h1><hr><br>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.1530182114857!2d80.9548188149969!3d26.86687908314743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfdd563c25cbf%3A0xbcefbb4f300d416c!2sMecatredz%20Technology%20Pvt%20Ltd%20Lucknow!5e0!3m2!1sen!2sin!4v1579602545279!5m2!1sen!2sin" width="100%" height="250" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </div>
+            <!--------------------------------------------------------End footer----------------------------------------------------------------------------------------->
+        <div class="row">
+                <div class="col-sm-12" style="min-height: 70px; font-weight: bold; color: red; text-align: center; font-size: 25px; line-height: 3; background: silver; font-family: Gabriola">
+                    <p>Copyright&copy;Mecatredz Technology Lucknow &Devloped by Er.Anjani Panday</p>
+            </div>
+        </div>
+    </div>
+        </div>
+    </body>
+</html>

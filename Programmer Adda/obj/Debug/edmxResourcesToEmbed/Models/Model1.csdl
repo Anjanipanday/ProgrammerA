@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pddbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="cid" />
+    </Key>
+    <Property Name="cid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="cdt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Enquiry">
+    <Key>
+      <PropertyRef Name="eid" />
+    </Key>
+    <Property Name="eid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+    <Property Name="mob" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="msg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="edt" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="passwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Programmer">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="mob" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ExpertArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="qua" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+    <Property Name="exp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="gender" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="mob" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="qualification" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="profile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="passwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="addr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="regdt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Review">
+    <Key>
+      <PropertyRef Name="rid" />
+    </Key>
+    <Property Name="rid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="rating" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rdt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="UploadError">
+    <Key>
+      <PropertyRef Name="fid" />
+    </Key>
+    <Property Name="fid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ufile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="udit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="pddbEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Comments" EntityType="Self.Comment" />
+    <EntitySet Name="Enquiries" EntityType="Self.Enquiry" />
+    <EntitySet Name="Logins" EntityType="Self.Login" />
+    <EntitySet Name="Programmers" EntityType="Self.Programmer" />
+    <EntitySet Name="Registrations" EntityType="Self.Registration" />
+    <EntitySet Name="Reviews" EntityType="Self.Review" />
+    <EntitySet Name="UploadErrors" EntityType="Self.UploadError" />
+  </EntityContainer>
+</Schema>

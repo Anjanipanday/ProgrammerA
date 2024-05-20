@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Enquiry";
+    Layout = "~/Views/Shared/GenralMaster.cshtml";
+    }
+<style>
+    body {
+        overflow-x: hidden;
+    }
+</style>
+<form action="/Home/Enquiry" method="post">
+<div class="row" style="background-image: url('../Content/img/images%20(20).jfif');background-repeat:no-repeat;background-size:100% 100%;margin-top:-12%">
+    <div class="row">
+    <div class=" col-sm-3"></div>
+    <div class="col-sm-6" style="min-height: 500px; margin-top: 50px; border: 4px solid blue; background: #F5FFFA; margin-bottom: 10px; font-family: Gabriola; border-radius: 30px;font-weight:bold;font-size:25px">
+        <div class="row" style="background: blue; color: white; font-size: 45px; text-align: center; font-family: Gabriola; border-radius: 20px 20px 0px 0px;">Enquiry-Form</div>
+        <br /><br />
+        Name<br/>
+        <input type="text" name="name" class="form-control" placeholder="Enter name" required="required" style="font-size:18px"/><br>
+        Email-Adress<br/>
+        <input type="email" name="email" class="form-control" placeholder="Enter Mail Address" required="required" style="font-size:18px"/><br>
+        Mobile-Number<br />
+        <input type="number" name="mob" class="form-control" placeholder="Enter Mobile Number" required="required" style="font-size:18px"/><br>
+        Message<br />
+        <input type="text" name="msg" style="height: 120px; font-size:18px" class="form-control" placeholder="Type Message" required="required"/><br />
+        <center><input type="submit" value="Enquiry Now" class="btn btn-success" style="height: 40px; width: 200px; font-size:18px"/></center>
+        <br /><br /> 
+    </div>
+    <div class="col-sm-3"></div>
+        </div>
+    </div>
+    </form>
+
+

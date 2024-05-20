@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "AddProgrammer";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+<form action="/Admin/AddProgrammer" method="post">
+    <div class="row" style="background-image: url('../Content/img/images%20(27).jfif'); background-repeat: no-repeat; background-size: 100% 100%; margin-top:-1.5%;">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6" style="min-height:550px;font-size:25px;font-weight:bold;font-family:Gabriola;background:white;border:4px solid orange;border-radius:30px;margin-top:50px;margin-bottom:10px">
+            <div class="row" style="font-size:40px;font-weight:bold;font-family:Gabriola;background:orange;border-radius:20px 20px 0px 0px;text-align:center;color:white">AddProgrammer</div>
+            <br /><br />
+            <div class="col-sm-6">
+                Name<br>
+                <input type="text" name="name" class="form-control" placeholder="Enter your name" style="font-size:18px" />
+                <br />
+                Email Address<br>
+                <input type="email" name="email" class="form-control" placeholder="Enter your Email" style="font-size:18px" />
+                <br />
+                Qualification<br>
+                <select style="font-size:18px" class="form-control" name="qua">
+                    <option>Select Qualification</option>
+                    <option>B.tec</option>
+                    <option>Diploma</option>
+                    <option>MBA</option>
+                    <option>Greduation</option>
+                    <option>M.tech</option>
+                </select>
+            </div>
+            <div class="col-sm-6">
+                Mobile<br>
+                <input type="number" name="mob" class="form-control" placeholder="Enter your mobile number" style="font-size:18px" />
+                <br />
+                Expert Area<br>
+                <input type="text" name="ExpertArea" class="form-control" placeholder="Expert Area" style="font-size:18px" />
+                <br />
+                Experience<br>
+                <input type="text" name="exp" class="form-control" placeholder="Experince" style="font-size:18px" />
+                <br />
+            </div>
+            <div class="col-sm-12">
+                <center><input type="submit" value="Add Programmer" class="btn btn-success" style="min-height: 50px; width: 120px; font-size:18px" /></center>
+            </div>
+        </div>
+        <div class="col-sm-3"></div>
+    </div>
+</form>

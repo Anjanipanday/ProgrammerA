@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="pddbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Comments">
+          <Key>
+            <PropertyRef Name="cid" />
+          </Key>
+          <Property Name="cid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="comments" Type="varchar(max)" />
+          <Property Name="status" Type="int" />
+          <Property Name="cdt" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Enquiry">
+          <Key>
+            <PropertyRef Name="eid" />
+          </Key>
+          <Property Name="eid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="120" />
+          <Property Name="mob" Type="varchar" MaxLength="50" />
+          <Property Name="msg" Type="varchar(max)" />
+          <Property Name="edt" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="passwd" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Programmers">
+          <Key>
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="mob" Type="varchar" MaxLength="40" />
+          <Property Name="email" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="ExpertArea" Type="varchar" MaxLength="50" />
+          <Property Name="qua" Type="varchar" MaxLength="70" />
+          <Property Name="exp" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Registration">
+          <Key>
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="gender" Type="varchar" MaxLength="40" />
+          <Property Name="email" Type="varchar" MaxLength="120" Nullable="false" />
+          <Property Name="mob" Type="varchar" MaxLength="30" />
+          <Property Name="qualification" Type="varchar" MaxLength="50" />
+          <Property Name="profile" Type="varchar(max)" />
+          <Property Name="passwd" Type="varchar" MaxLength="50" />
+          <Property Name="addr" Type="varchar(max)" />
+          <Property Name="regdt" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Review">
+          <Key>
+            <PropertyRef Name="rid" />
+          </Key>
+          <Property Name="rid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="email" Type="varchar" MaxLength="100" />
+          <Property Name="rating" Type="varchar" MaxLength="50" />
+          <Property Name="rdt" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="UploadErrors">
+          <Key>
+            <PropertyRef Name="fid" />
+          </Key>
+          <Property Name="fid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="varchar" MaxLength="50" />
+          <Property Name="ufile" Type="varchar(max)" />
+          <Property Name="comments" Type="varchar(max)" />
+          <Property Name="udit" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="pddbModelStoreContainer">
+          <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Enquiry" EntityType="Self.Enquiry" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Programmers" EntityType="Self.Programmers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Registration" EntityType="Self.Registration" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Review" EntityType="Self.Review" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UploadErrors" EntityType="Self.UploadErrors" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="pddbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Comment">
+          <Key>
+            <PropertyRef Name="cid" />
+          </Key>
+          <Property Name="cid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="cdt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Enquiry">
+          <Key>
+            <PropertyRef Name="eid" />
+          </Key>
+          <Property Name="eid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="mob" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="msg" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="edt" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="userid" />
+          </Key>
+          <Property Name="userid" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="passwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Programmer">
+          <Key>
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="mob" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="ExpertArea" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="qua" Type="String" MaxLength="70" FixedLength="false" Unicode="false" />
+          <Property Name="exp" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Registration">
+          <Key>
+            <PropertyRef Name="email" />
+          </Key>
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="gender" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="120" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="mob" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="qualification" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="profile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="passwd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="addr" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="regdt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Review">
+          <Key>
+            <PropertyRef Name="rid" />
+          </Key>
+          <Property Name="rid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="rating" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="rdt" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="UploadError">
+          <Key>
+            <PropertyRef Name="fid" />
+          </Key>
+          <Property Name="fid" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ufile" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="comments" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="udit" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="pddbEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Comments" EntityType="Self.Comment" />
+          <EntitySet Name="Enquiries" EntityType="Self.Enquiry" />
+          <EntitySet Name="Logins" EntityType="Self.Login" />
+          <EntitySet Name="Programmers" EntityType="Self.Programmer" />
+          <EntitySet Name="Registrations" EntityType="Self.Registration" />
+          <EntitySet Name="Reviews" EntityType="Self.Review" />
+          <EntitySet Name="UploadErrors" EntityType="Self.UploadError" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="pddbModelStoreContainer" CdmEntityContainer="pddbEntities">
+          <EntitySetMapping Name="Comments">
+            <EntityTypeMapping TypeName="pddbModel.Comment">
+              <MappingFragment StoreEntitySet="Comments">
+                <ScalarProperty Name="cid" ColumnName="cid" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="cdt" ColumnName="cdt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Enquiries">
+            <EntityTypeMapping TypeName="pddbModel.Enquiry">
+              <MappingFragment StoreEntitySet="Enquiry">
+                <ScalarProperty Name="eid" ColumnName="eid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mob" ColumnName="mob" />
+                <ScalarProperty Name="msg" ColumnName="msg" />
+                <ScalarProperty Name="edt" ColumnName="edt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="pddbModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="userid" ColumnName="userid" />
+                <ScalarProperty Name="passwd" ColumnName="passwd" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Programmers">
+            <EntityTypeMapping TypeName="pddbModel.Programmer">
+              <MappingFragment StoreEntitySet="Programmers">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="mob" ColumnName="mob" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="ExpertArea" ColumnName="ExpertArea" />
+                <ScalarProperty Name="qua" ColumnName="qua" />
+                <ScalarProperty Name="exp" ColumnName="exp" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Registrations">
+            <EntityTypeMapping TypeName="pddbModel.Registration">
+              <MappingFragment StoreEntitySet="Registration">
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="gender" ColumnName="gender" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="mob" ColumnName="mob" />
+                <ScalarProperty Name="qualification" ColumnName="qualification" />
+                <ScalarProperty Name="profile" ColumnName="profile" />
+                <ScalarProperty Name="passwd" ColumnName="passwd" />
+                <ScalarProperty Name="addr" ColumnName="addr" />
+                <ScalarProperty Name="regdt" ColumnName="regdt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Reviews">
+            <EntityTypeMapping TypeName="pddbModel.Review">
+              <MappingFragment StoreEntitySet="Review">
+                <ScalarProperty Name="rid" ColumnName="rid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="rating" ColumnName="rating" />
+                <ScalarProperty Name="rdt" ColumnName="rdt" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UploadErrors">
+            <EntityTypeMapping TypeName="pddbModel.UploadError">
+              <MappingFragment StoreEntitySet="UploadErrors">
+                <ScalarProperty Name="fid" ColumnName="fid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="ufile" ColumnName="ufile" />
+                <ScalarProperty Name="comments" ColumnName="comments" />
+                <ScalarProperty Name="udit" ColumnName="udit" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

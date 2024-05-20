@@ -1,0 +1,64 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+<style>
+    .col-sm-3
+     {
+      background:linear-gradient(orange,pink,purple);
+      min-height:180px;
+      margin: 2%;
+      border-radius:30px;
+    text-align:center;
+    border:2px solid orange;
+    }
+        .col-sm-3 a {
+            font-size: 30px;
+            color: white;
+            font-weight: bold;
+            line-height: 6;
+            font-family: Gabriola;
+        }
+    .col-sm-3:hover
+    {
+    background:linear-gradient(orange,purple,pink);
+    border:2px solid purple;
+    }
+    </style>
+<div class="row "style="background-image:url('../Content/img/images%20(27).jfif'); background-repeat: no-repeat; background-size: 100% 100%; margin-top:-1.5%;">
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3 hvr hvr-pulse">
+        <a href="/Admin/Index"><span class=" fa fa-dashboard"></span>&nbsp;&nbsp;Dashbord</a>
+    </div>
+    <div class="col-sm-3 hvr hvr-pulse" >
+        <a href="/Admin/MembersMgmt"><span class=" fa fa-users"></span>&nbsp;&nbsp;Members management</a>
+    </div>
+    <div class="col-sm-3 hvr hvr-pulse">
+        <a href="/Admin/EnquiryMgmt"><span class=" fa fa-cog"></span>&nbsp;&nbsp;Enquiry Management</a>
+    </div>
+</div>
+<div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3 hvr hvr-pulse">
+        <a href="/Admin/ReviewMgmt"><span class=" fa fa-search"></span>&nbsp;&nbsp;Review Management</a>
+    </div><div class="col-sm-3 hvr hvr-pulse">
+        <a href="/Admin/AddProgrammer"><span class=" fa fa-plus"></span>&nbsp;&nbsp;Add Programmer</a>
+    </div>
+    <div class="col-sm-3 hvr hvr-pulse">
+        <a href="/Admin/ProgrammerMgmt"><span class=" fa fa-wrench"></span>ProgrammersManagement</a>
+    </div>
+</div>
+<div class="=row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-3 hvr hvr-pulse">
+        <a href="/Admin/ChangePassword"><span class=" fa fa-retweet"></span>&nbsp;&nbsp;Change Password</a>
+    </div>
+    <div class="col-sm-3 hvr hvr-pulse">
+        <a href="/Admin/Logout"><span class=" fa fa-arrow-right"></span>&nbsp;&nbsp;Logout</a>
+    </div>
+    <div class="col-sm-2"></div>
+ </div>
+</div>
+

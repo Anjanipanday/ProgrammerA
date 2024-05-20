@@ -1,0 +1,68 @@
+﻿@model List<Programmer_Adda.Models.Registration>
+
+@{
+    ViewBag.Title = "MembersMgmt";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+<div class="row" style="font-size:25px;">
+    <h2 style="color:orange;font-family:Gabriola;font-size:50px;text-align:center;font-weight:bold">MembersMgmt</h2>
+
+    <table class="table table-responsive">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Gender
+            </th>
+            <th>
+                Mobile
+            </th>
+            <th>
+                Qualification
+            </th>
+            <th>
+                Profile
+            </th>
+
+            <th>
+                Address
+            </th>
+            <th>
+                Registration Date
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.mob)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.qualification)
+        </td>
+        <td>
+            <img src="../Content/profiles/@Html.DisplayFor(modelItem => item.profile)" height="80px" width="80px" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.passwd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.addr)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.regdt)
+        </td>
+
+    </tr>
+}
+
+    </table>
+    </div>

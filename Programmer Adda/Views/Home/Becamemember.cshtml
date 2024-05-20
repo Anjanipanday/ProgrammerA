@@ -1,0 +1,63 @@
+﻿
+@{
+    ViewBag.Title = "Becamemember";
+    Layout = "~/Views/Shared/GenralMaster.cshtml";
+    }
+<style>
+    body {
+        overflow-x: hidden;
+    }
+</style>
+
+<form action="/Home/Becamemember" method="post" enctype="multipart/form-data">
+    <div class="row" style="background-image: url('../Content/img/images%20(20).jfif');background-repeat:no-repeat;background-size:100% 100%;margin-top:-12%">
+        <div class="row">
+        <div class="col-sm-3"></div>
+        <div class="col-sm-6" style="min-height: 700px; margin-top: 50px; border: 4px solid blue; background: white; margin-bottom: 10px; border-radius: 30px; font-family: Gabriola; font-weight: bold; font-size: 25px; ">
+            <div class="row" style="background: blue; color: white; font-size: 45px; text-align: center; font-family: Gabriola; border-radius: 20px 20px 0px 0px;">Become A Member</div>
+            <div class="col-sm-6">
+                <br /><br />
+                Name<br />
+                <input type="text" name="name" class="form-control" placeholder="Enter name" required="required" style="font-size:18px" /><br>
+                Gender
+                <input type="radio" name="gender" />male
+                <input type="radio" name="gender" />female
+                <br /><br />
+                Email-Adress<br />
+                <input type="email" name="email" class="form-control" placeholder="Enter Mail Address" required="required" style="font-size:18px" /><br>
+                Profile<br />
+                <input type="file" name="pic" class="form-control" placeholder="Enter Your Profile" required="required" style="font-size:18px" /><br>
+            </div>
+            <div class="col-sm-6">
+                <br /><br />
+                Mobile Number<br />
+                <input type="number" name="mob" class="form-control" placeholder="Enter Your Mobile Number" required="required" style="font-size:18px" /><br>
+                password<br />
+                <input type="password" name="passwd" class="form-control" placeholder="Enter Password" required="required" style="font-size:20px" /><br>
+                Select  Qualification<br />
+                <select class="form-control" name="qualification" style="font-size:18px">
+                    <option>select qualification</option>
+                    <option>MCA</option>
+                    <option>Btech</option>
+                    <option>Diploma</option>
+                    <option>ITI</option>
+                    <option>M.Tech</option>
+                    <option>Gradution</option>
+                    <option>M.Tech</option>
+                </select>
+            </div>
+            <div class="col-sm-12">
+                Address<br />
+                <input type="text" name="addr" style="height: 120px; font-size: 18px" class="form-control" placeholder="Type Address Here.."/><br />
+                <center><input type="submit" value="Register Now" class="btn btn-success" style="height: 40px; width: 200px; font-size: 18px"/></center>
+            </div>
+            <br /><br />
+        </div>
+       <div class="col-sm-3"></div>
+            </div>
+        <br /><br />
+    </div>
+</form>
+
+
+

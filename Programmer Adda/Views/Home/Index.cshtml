@@ -1,0 +1,112 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/GenralMaster.cshtml";
+}
+<script>
+    var arr=["a.jfif","a1.jfif","a2.jfif","a3.jfif","a4.jfif","a5.jfif","a6.jfif","a7.jfif"];
+    var i=0;
+    function slider()
+    {
+        document.getElementById("img1").src = "../Content/img/" + arr[i];
+        i++;
+        if(i==arr.length)
+        {
+            i = 0;
+        }
+        window.setTimeout("slider()", 3000);
+    }
+    window.onload = slider;
+</script>
+<div class="row" style="margin-top:-1.5%;">
+    <div class="col-sm-8" style="min-height:500px;background:yellow">
+        <div class="row">
+        <img src="~/Content/img/a4.jfif"style="height:500px;width:100%;"id="img1"/></div>
+    </div>
+    <div class="col-sm-4" style="min-height:500px;background:silver;border:2px solid black;">
+        <div class="row" style="background: blue; text-align: center; font-size: 35px; padding-top: 3px; font-weight: bold; color: white; font-family: Gabriola">Updates Notification</div>
+        <marquee style="font-size: 25px; color: red; font-family: Gabriola"direction="up" height="300px" onmouseover="stop()" onmouseout="start()">
+            <ul>
+                <li> Now your scolarship is about come</li>
+                <li>Last date of Registration for your next semester 25-1-2020</li>
+                <li> the latest version notes are phython is already upload</li>
+                <li> Your sum-semester classes will be started 15-01-2020. </li>
+                <li>Your odd-semester results Will be come on 6-02-2020.</li>
+            </ul>
+        </marquee>
+    </div>
+</div>
+<div class="row" style="">
+    <div class="col-sm-12" style="min-height:500px;padding:15px;font-size:20px;font-family:'Palatino Linotype';">
+        <h2 style="text-align:center;color:blue;font-size:50px;font-weight:bold;font-family:Gabriola"><u>Imformation About of My Project</u></h2>
+    <p style="text-align:justify"> Ada was originally targeted at embedded and real-time systems. The Ada 95 revision, designed by S. Tucker Taft of Intermetrics between 1992 and 1995, improved support for systems, numerical, financial, and object-oriented programming (OOP).
+
+Features of Ada include: strong typing, modularity mechanisms (packages), run-time checking, parallel processing (tasks, synchronous message passing, protected objects, and nondeterministic select statements), exception handling, and generics. Ada 95 added support for object-oriented programming, including dynamic dispatch.
+
+The syntax of Ada minimizes choices of ways to perform basic operations, and prefers English keywords (such as "or else" and "and then") to symbols (such as "||" and "&&"). Ada uses the basic arithmetical operators "+", "-", "*", and "/", but avoids using other symbols. Code blocks are delimited by words such as "declare", "begin", and "end", where the "end" (in most cases) is followed by the identifier of the block it closes (e.g., if ... end if, loop ... end loop). In the case of conditional blocks this avoids a dangling else that could pair with the wrong nested if-expression in other languages like C or Java.
+
+Ada is designed for development of very large software systems. Ada packages can be compiled separately. Ada package specifications (the package interface) can also be compiled separately without the implementation to check for consistency. This makes it possible to detect problems early during the design phase, before implementation starts.
+
+A large number of compile-time checks are supported to help avoid bugs that would not be detectable until run-time in some other languages or would require explicit checks to be added to the source code. For example, the syntax requires explicitly named closing of blocks to prevent errors due to mismatched end tokens. The adherence to strong typing allows detection of many common software errors (wrong parameters, range violations, invalid references, mismatched types, etc.) either during compile-time, or otherwise during run-time. As concurrency is part of the language specification, the compiler can in some cases detect potential deadlocks.[citation needed] Compilers also commonly check for misspelled identifiers, visibility of packages, redundant declarations, etc. and can provide warnings and useful suggestions on how to fix the error.
+
+Ada also supports run-time checks to protect against access to unallocated memory, buffer overflow errors, range violations, off-by-one errors, array access errors, and other detectable bugs. These checks can be disabled in the interest of runtime efficiency, but can often be compiled efficiently. It also includes facilities to help program verification. For these reasons, Ada is widely used in critical systems, where any anomaly might lead to very serious consequences, e.g., accidental death, injury or severe financial loss. Examples of systems where Ada is used include avionics, air traffic control, railways, banking, military and space technology.[11][12]
+
+Ada's dynamic memory management is high-level and type-safe. Ada does not have generic or untyped pointers; nor does it implicitly declare any pointer type. Instead, all dynamic memory allocation and deallocation must take place through explicitly declared access types. Each access type has an associated storage pool that handles the low-level details of memory management; the programmer can either use the default storage pool or define new ones (this is particularly relevant for Non-Uniform Memory Access). It is even possible to declare several different access types that all designate the same type but use different storage pools. Also, the language provides for accessibility checks, both at compile time and at run time, that ensures that an access value cannot outlive the type of the object it points to.
+
+Though the semantics of the language allow automatic garbage collection of inaccessible objects, most implementations do not support it by default, as it would cause unpredictable behaviour in real-time systems. Ada does support a limited form of region-based memory management; also, creative use of storage pools can provide for a limited form of automatic garbage collection, since destroying a storage pool also destroys all the objects in the pool.
+
+A double-dash ("--"), resembling an em dash, denotes comment text. Comments stop at end of line, to prevent unclosed comments from accidentally voiding whole sections of source code. Disabling a whole block of code now requires the prefixing of each line (or column) individually with "--". While clearly denoting disabled code with a column of repeated "--" down the page this renders the experimental dis/re-enablement of large blocks a more drawn out process.</p>
+</div>
+</div>
+<h2 style="font-size:50px;font-family:Gabriola;font-weight:bold;color:blue;text-align:center">About Mecatredz Technology Teem</h2>
+<div class="row">
+    <div class="col-sm-3 hvr hvr-pulse"  style="min-height:500px;">
+        <img src=" ~/Content/img/mahaguru.jpg" style="height:350px;width:100%;border:4px solid blue;border-radius:30px 0px 30px 0px" />
+        <p style="font-size:30px;font-family:Gabriola;font-weight:bold;color:blue;text-align:center">Er.Akhilesh Kumar<br>Executive & Managing Director</p>
+   </div>
+    <div class="col-sm-3 hvr hvr-pulse" style="min-height:500px;">
+        <img src="~/Content/img/Suraj.jpg" style="height:350px;width:100%;border:4px solid blue;border-radius:30px 0px 30px 0px" />
+        <p style="font-size:30px;font-family:Gabriola;font-weight:bold;color:blue;text-align:center">Er.Suraj Singh<br>Chief Executive Officer</p>
+    </div>
+    <div class="col-sm-3 hvr hvr-pulse" style="min-height:500px;">
+        <img src="~/Content/img/Sandeep.jpg" style="height:350px;width:100%;border:4px solid blue;border-radius:30px 0px 30px 0px" />
+        <p style="font-size:30px;font-family:Gabriola;font-weight:bold;color:blue;text-align:center">Er.Sandeep Kumar<br>Project Manager</p>
+    </div>
+    <div class="col-sm-3 hvr hvr-pulse" style="min-height:500px;">
+        <img src="~/Content/img/Tanya.jpg" style="height:350px;width:100%;border:4px solid blue;border-radius:30px 0px 30px 0px" />
+        <p style="font-size:30px;font-family:Gabriola;font-weight:bold;color:blue;text-align:center">Er.Tanya Gangwar<br>HR Manager</p>
+    </div>
+</div>
+<div class="row"style="background:blue;min-height:350px">
+    <div class="col-sm-6" style="font-size:50px;font-family:Gabriola;color:white;font-weight:bold"><u>Our Teem<br>Member Image</u></div>
+    <div class="col-sm-3 hvr hvr-pulse">
+        <img src="~/Content/img/mahaguru.jpg" style="height:300px;width:100%" />
+        <p style="font-size:30px;font-family:Gabriola;font-weight:bold;color:white;text-align:center">Er.Akhilesh Kumar</p>
+    </div>
+    <div class="col-sm-3 hvr hvr-pulse">
+        <img src="~/Content/img/anku.jpg" style="height:300px;width:100%" />
+        <p style="font-size:30px;font-family:Gabriola;font-weight:bold;color:white;text-align:center"> Er.Anku Chaurasia</p>
+    </div>
+</div>
+<div class="row" style="background:blue;min-height:350px">
+    <div class="col-sm-3 hvr hvr-pulse">
+        <img src="~/Content/img/anjani.jpg" style="height:300px;width:100%" />
+        <p style="font-size:30px;font-family:Gabriola;font-weight:bold;color:white;text-align:center"> Er.Anjani Panday<br>(Teem Leader)</p>
+    </div>
+    <div class="col-sm-3 hvr hvr-pulse">
+        <img src="~/Content/img/Bhupesh.jpg" style="height:300px;width:100%" />
+        <p style="font-size:30px;font-family:Gabriola;font-weight:bold;color:white;text-align:center">Er.Bhupesh<br>(Teem Leader)</p>
+    </div>
+    <div class="col-sm-3 hvr hvr-pulse">
+        <img src="~/Content/img/Amit.jpg" style="height:300px;width:100%" />
+        <p style="font-size:30px;font-family:Gabriola;font-weight:bold;color:white;text-align:center">Er. Amit</p>
+    </div>
+    <div class="col-sm-3 hvr hvr-pulse">
+        <img src="~/Content/img/subia.jpg" style="height:300px;width:100%" />
+        <p style="font-size:30px;font-family:Gabriola;font-weight:bold;color:white;text-align:center"> Er.Subia</p>
+    </div>
+</div>
+<br />
+
+
+

@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="pddbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="cid" />
+    </Key>
+    <Property Name="cid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="comments" Type="varchar(max)" />
+    <Property Name="status" Type="int" />
+    <Property Name="cdt" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Enquiry">
+    <Key>
+      <PropertyRef Name="eid" />
+    </Key>
+    <Property Name="eid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="120" />
+    <Property Name="mob" Type="varchar" MaxLength="50" />
+    <Property Name="msg" Type="varchar(max)" />
+    <Property Name="edt" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="userid" />
+    </Key>
+    <Property Name="userid" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="passwd" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Programmers">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="mob" Type="varchar" MaxLength="40" />
+    <Property Name="email" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="ExpertArea" Type="varchar" MaxLength="50" />
+    <Property Name="qua" Type="varchar" MaxLength="70" />
+    <Property Name="exp" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Registration">
+    <Key>
+      <PropertyRef Name="email" />
+    </Key>
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="gender" Type="varchar" MaxLength="40" />
+    <Property Name="email" Type="varchar" MaxLength="120" Nullable="false" />
+    <Property Name="mob" Type="varchar" MaxLength="30" />
+    <Property Name="qualification" Type="varchar" MaxLength="50" />
+    <Property Name="profile" Type="varchar(max)" />
+    <Property Name="passwd" Type="varchar" MaxLength="50" />
+    <Property Name="addr" Type="varchar(max)" />
+    <Property Name="regdt" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Review">
+    <Key>
+      <PropertyRef Name="rid" />
+    </Key>
+    <Property Name="rid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="rating" Type="varchar" MaxLength="50" />
+    <Property Name="rdt" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="UploadErrors">
+    <Key>
+      <PropertyRef Name="fid" />
+    </Key>
+    <Property Name="fid" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="50" />
+    <Property Name="ufile" Type="varchar(max)" />
+    <Property Name="comments" Type="varchar(max)" />
+    <Property Name="udit" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="pddbModelStoreContainer">
+    <EntitySet Name="Comments" EntityType="Self.Comments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Enquiry" EntityType="Self.Enquiry" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Programmers" EntityType="Self.Programmers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Registration" EntityType="Self.Registration" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Review" EntityType="Self.Review" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UploadErrors" EntityType="Self.UploadErrors" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

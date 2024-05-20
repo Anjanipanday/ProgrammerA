@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewBag.Title = "Logout";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+<script>
+    function logout()
+    {
+        window.history.forward();
+        window.setTimeout("window.location.href='../Home/Login'", 1500);
+    }
+    window.onload = logout;
+</script>
+<h2 style="color:orange;font-family:Gabriola;font-size:50px;text-align:center;font-weight:bold">Logout</h2>
+

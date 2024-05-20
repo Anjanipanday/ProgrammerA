@@ -1,0 +1,49 @@
+﻿@model List<Programmer_Adda.Models.Review>
+
+@{
+    ViewBag.Title = "ReviewMgmt";
+    Layout = "~/Views/Shared/AdminMaster.cshtml";
+}
+
+<div class="row" style="font-size:25px;">
+    <h2 style="color:orange;font-family:Gabriola;font-size:50px;text-align:center;font-weight:bold">ReviewMgmt</h2>
+
+
+<table class="table table-responsive">
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Email
+            </th>
+            <th>
+                Rating
+            </th>
+            <th>
+                Rating Date
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.rating)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.rdt)
+                </td>
+
+            </tr>
+        }
+
+    </table>
+    </div>

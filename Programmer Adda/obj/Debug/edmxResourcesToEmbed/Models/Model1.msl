@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="pddbModelStoreContainer" CdmEntityContainer="pddbEntities">
+    <EntitySetMapping Name="Comments">
+      <EntityTypeMapping TypeName="pddbModel.Comment">
+        <MappingFragment StoreEntitySet="Comments">
+          <ScalarProperty Name="cid" ColumnName="cid" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="cdt" ColumnName="cdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Enquiries">
+      <EntityTypeMapping TypeName="pddbModel.Enquiry">
+        <MappingFragment StoreEntitySet="Enquiry">
+          <ScalarProperty Name="eid" ColumnName="eid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mob" ColumnName="mob" />
+          <ScalarProperty Name="msg" ColumnName="msg" />
+          <ScalarProperty Name="edt" ColumnName="edt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Logins">
+      <EntityTypeMapping TypeName="pddbModel.Login">
+        <MappingFragment StoreEntitySet="Login">
+          <ScalarProperty Name="userid" ColumnName="userid" />
+          <ScalarProperty Name="passwd" ColumnName="passwd" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Programmers">
+      <EntityTypeMapping TypeName="pddbModel.Programmer">
+        <MappingFragment StoreEntitySet="Programmers">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="mob" ColumnName="mob" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="ExpertArea" ColumnName="ExpertArea" />
+          <ScalarProperty Name="qua" ColumnName="qua" />
+          <ScalarProperty Name="exp" ColumnName="exp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Registrations">
+      <EntityTypeMapping TypeName="pddbModel.Registration">
+        <MappingFragment StoreEntitySet="Registration">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="gender" ColumnName="gender" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="mob" ColumnName="mob" />
+          <ScalarProperty Name="qualification" ColumnName="qualification" />
+          <ScalarProperty Name="profile" ColumnName="profile" />
+          <ScalarProperty Name="passwd" ColumnName="passwd" />
+          <ScalarProperty Name="addr" ColumnName="addr" />
+          <ScalarProperty Name="regdt" ColumnName="regdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Reviews">
+      <EntityTypeMapping TypeName="pddbModel.Review">
+        <MappingFragment StoreEntitySet="Review">
+          <ScalarProperty Name="rid" ColumnName="rid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="rdt" ColumnName="rdt" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UploadErrors">
+      <EntityTypeMapping TypeName="pddbModel.UploadError">
+        <MappingFragment StoreEntitySet="UploadErrors">
+          <ScalarProperty Name="fid" ColumnName="fid" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="ufile" ColumnName="ufile" />
+          <ScalarProperty Name="comments" ColumnName="comments" />
+          <ScalarProperty Name="udit" ColumnName="udit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

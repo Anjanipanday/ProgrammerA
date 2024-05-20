@@ -1,0 +1,96 @@
+﻿@model List<Programmer_Adda.Models.UploadError>
+
+@{
+    ViewBag.Title = "Disscussionform";
+    Layout = "~/Views/Shared/GenralMaster.cshtml";
+}
+<script>
+$(document).ready(function(){
+    $(".s").click(function () {
+        alert("ok")
+        var t = $(this).text();
+        var txt = $("#" + t).val()
+        alert(t)
+        var obj = { comment: txt, status: t };
+   $.getJSON("/Home/mydata", obj, function (data) {
+            if (data == "done") {
+                alert('Thanks for comment');
+                $("#" + t).val("")
+            }
+            else {
+                alert('your comment is not uploaded');
+            }
+        })
+    })
+    //display comments here.....
+    $(".scomment").click(function () {
+        var txt = "";
+        var sn =$(this).html();        
+        $.getJSON("/Home/displayData", { status:sn}, function (data) {
+            for (var i = 0; i < data.length; i++)
+            {
+                txt +="<span class='fa fa-user' style='font-size:20px'></span>"+data[i].comments + "<br/>";
+                $("#d_" + data[i].status).html(txt);
+            }
+        })
+    })
+})
+</script>
+  
+<center><h2 style="font-size: 50px; color: blue; font-weight: bold; font-family: Gabriola; ">Disscussionform</h2></center>
+@{
+foreach(var m in Model)
+{
+    <div style="border: 4px solid blue; padding: 20px; margin-top: 20px; font-weight: bold; font-size: 25px; font-family: Gabriola">
+        <center><h4 style="font-size:35px;color:blue;font-weight:bold">Upload Queries</h4></center>
+        <hr />
+        <div class="row">
+            <div class="col-sm-6">
+                <dl class="dl-horizontal">
+                    <dt style="font-weight: bold;color:blue;font-size:25px;font-family:Gabriola">
+                        Name
+                    </dt>
+
+                    <dd>
+                        @m.name
+                    </dd>
+
+                    <dt style="font-weight: bold; color: blue; font-size: 25px; font-family: Gabriola">
+                        ufile
+                    </dt>
+
+                    <dd>
+                        <img src="../Content/Errors/@m.ufile" height="250px" width="300px" />
+                    </dd>
+
+                    <dt style="font-weight: bold; color: blue; font-size: 25px; font-family: Gabriola">
+                        Description
+                    </dt>
+
+                    <dd>
+                        @m.comments
+                    </dd>
+
+                    <dt style="font-weight: bold; color: blue; font-size: 25px; font-family: Gabriola" >
+                        Upload File
+                    </dt>
+
+                    <dd>
+                        @m.udit
+                    </dd>
+                </dl>
+            </div>
+       
+            <div class="col-sm-6">
+                <span class="fa fa-comments scomment" style="font-size: 30px; color: blue; cursor: pointer; font-family: Gabriola">@m.fid</span>
+                <br />
+                <div class="col-sm-12">
+                    <input type="text" name="txtcomment" class="txt" id="@m.fid" style="height:50px;width:70%;padding:5px" placeholder="Type comment here....." />
+                    <span class="fa fa-paper-plane s"id="sp" style="font-size:30px;background:blue;color:white;padding:15px;cursor:pointer" title="click here to send">@m.fid</span>
+                </div>
+                <div id="d_@m.fid" class="col-sm-12" style="min-height:200px;margin-top:10px;border:1px solid blue"></div>
+            </div>
+    </div>
+    </div>
+}
+}
